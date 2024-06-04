@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&family=Tilt+Neon&display=swap");
+
+body {
+    font-family: "Nunito", sans-serif;
+    min-height: 100vh;
+    background: rgb(67, 69, 112);
+    background: radial-gradient(circle, rgba(67, 69, 112, 1) 3%, rgba(35, 36, 57, 1) 60%);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 50px 0; /* Ajustamos el padding para centrado vertical */
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Agregamos un gap para separar las cartas */
+}
+
+.our-team {
+    padding: 30px 0 40px;
+    margin: 50px; /* Ajustamos el margen para separar las cartas */
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(
+        90deg,
+        rgb(118, 167, 63) 0%,
+        rgb(51, 143, 118) 40%,
+        rgb(55, 141, 167) 50%,
+        rgb(117, 152, 242) 70%,
+        rgb(144, 118, 236) 100%
+    );
+    background-size: 200%;
+    background-position: left;
+    color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.5), inset 0px 2px 2px rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease-in;
+    animation: backgroundMove 10s linear infinite alternate;
+    width: 250px; /* Ajustamos el ancho */
+}
+
+@keyframes backgroundMove {
+    0% {
+        background-position: left;
+    }
+    100% {
+        background-position: right;
+    }
+}
+
+.our-team .picture {
+    display: inline-block;
+    height: 150px; /* Ajustamos el tamaño de la imagen */
+    width: 150px; /* Ajustamos el tamaño de la imagen */
+    margin-bottom: 50px;
+    z-index: 1;
+    position: relative;
+    border-radius: 50%;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+.our-team .picture::before {
+    content: "";
+    width: 100%;
+    height: 0;
+    border-radius: 50%;
+    background-color: #1369ce;
+    position: absolute;
+    bottom: 135%;
+    right: 0;
+    left: 0;
+    opacity: 0.9;
+    transform: scale(3);
+    transition: all 0.3s linear 0s;
+}
+
+.our-team:hover .picture::before {
+    height: 100%;
+}
+
+.our-team .picture::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #1369ce;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.our-team .picture img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    transform: scale(1);
+    transition: all 0.9s ease 0s;
+}
+
+.our-team:hover .picture img {
+    box-shadow: 0 0 0 14px #f7f5ec;
+    transform: scale(0.7);
+}
+
+.our-team .title {
+    display: block;
+    font-size: 18px; /* Ajustamos el tamaño del texto */
+    color: #4e5052;
+    text-transform: capitalize;
+}
+
+.our-team .social {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: #1369ce;
+    position: absolute;
+    bottom: -100px;
+    left: 0;
+    transition: all 0.5s ease 0s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.our-team:hover .social {
+    bottom: 0;
+}
+
+.our-team .social li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.our-team .social li a {
+    display: block;
+    padding: 10px;
+    font-size: 17px;
+    color: white;
+    transition: all 0.3s ease 0s;
+    text-decoration: none;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, #559b9a, #3b3d8a);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5), inset 0px 4px 4px rgba(255, 255, 255, 0.2);
+}
+
+.our-team .social li a:hover {
+    color: #1369ce;
+    background-color: #f7f5ec;
+}
+
+@media (max-width: 768px) {
+    .our-team {
+        width: 220px; /* Ajustamos el ancho para pantallas más pequeñas */
+        margin: 20px auto; /* Centramos las cartas */
+    }
+    
+    .our-team .title {
+        font-size: 16px; /* Ajustamos el tamaño del texto para pantallas más pequeñas */
+    }
+    
+    .our-team .picture {
+        height: 130px; /* Ajustamos el tamaño de la imagen para pantallas más pequeñas */
+        width: 130px; /* Ajustamos el tamaño de la imagen para pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 576px) {
+    .our-team {
+        width: 200px; /* Ajustamos el ancho para pantallas aún más pequeñas */
+        margin: 20px auto; /* Centramos las cartas */
+    }
+    
+    .our-team .title {
+        font-size: 14px; /* Ajustamos el tamaño del texto para pantallas aún más pequeñas */
+    }
+    
+    .our-team .picture {
+        height: 110px; /* Ajustamos el tamaño de la imagen para pantallas aún más pequeñas */
+        width: 110px; /* Ajustamos el tamaño de la imagen para pantallas aún más pequeñas */
+    }
+}
