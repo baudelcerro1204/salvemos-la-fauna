@@ -3,56 +3,89 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/footer.css">
   <link rel="stylesheet" href="styles/avances.css">
+  <link rel="stylesheet" href="styles/navbar.css"> <!-- Enlace al CSS del navbar -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
   <title>Salvemos la fauna - Avances</title>
 </head>
 <body>
-    <section class="advances">
-        <h2 class="advances-title gradient-text">Salvemos la fauna - Avances</h2>
-        
-        <div class="presentation-general" data-tilt>
-            <h3>Presentación General</h3>
-            <p>El tema elegido para abordar con juegos es <strong>Animales en Extinción</strong>. Este tema busca crear conciencia sobre la importancia de proteger a las especies en peligro de extinción a través de una serie de juegos interactivos y educativos.</p>
-            <p>Algunos enlaces informativos sobre el tema:</p>
-            <ul>
-              <li><a href="https://www.worldwildlife.org/species/directory?direction=desc&sort=extinction_status" target="_blank">World Wildlife Fund - Species Directory</a></li>
-              <li><a href="https://www.iucnredlist.org/" target="_blank">IUCN Red List of Threatened Species</a></li>
-            </ul>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-custom navbar-mainbg">
+      <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars text-white"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+              <div class="hori-selector"><div class="left"></div><div class="right"></div></div>
+              <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item active">
+                  <a class="nav-link" href="avances.html">Avances</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="juegos.html">Juegos</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="integrantes.html">Integrantes</a>
+              </li>
+          </ul>
+      </div>
+  </nav>
+
+  <section class="advances">
+      <h2 class="advances-title gradient-text">Salvemos la fauna - Avances</h2>
+      
+      <div class="presentation-general" data-tilt>
+          <h3>Presentación General</h3>
+          <p>El tema elegido para abordar con juegos es <strong>Animales en Extinción</strong>. Este tema busca crear conciencia sobre la importancia de proteger a las especies en peligro de extinción a través de una serie de juegos interactivos y educativos.</p>
+          <p>Algunos enlaces informativos sobre el tema:</p>
+          <ul>
+            <li><a href="https://www.worldwildlife.org/species/directory?direction=desc&sort=extinction_status" target="_blank">World Wildlife Fund - Species Directory</a></li>
+            <li><a href="https://www.iucnredlist.org/" target="_blank">IUCN Red List of Threatened Species</a></li>
+          </ul>
+      </div>
+      
+      <div class="target-audience" data-tilt>
+        <h3>Público Objetivo</h3>
+        <p>Nuestra propuesta web está dirigida principalmente a niños y adolescentes de 7 a 15 años, tanto de sexo masculino como femenino. Este público objetivo es ideal debido a su alta receptividad hacia los juegos educativos y su capacidad de influenciar positivamente su entorno familiar y escolar.</p>
+      </div>
+      
+      <div class="visual-identity" data-tilt>
+          <h3>Identidad Visual</h3>
+          <p>La identidad visual de nuestro sitio web incluirá:</p>
+          <ul>
+            <li>Logo: Animales en peligro de extinción.</li>
+            <li>Paleta de colores: Verde bosque, azul marino, café tierra, gris claro y blanco.</li>
+            <li>Íconos: Relacionados con animales y naturaleza, en estilo lineal.</li>
+            <li>Favicon: Logo de la UADE.</li>
+            <li>Estilos: Modernos y amigables, con fuentes "Nunito" y "Tilt Neon".</li>
+            <li>Nombre del sitio web: "Salvemos la Fauna"</li>
+            <li>Eslogan: "Juntos por un futuro salvaje"</li>
+          </ul>
         </div>
         
-        <div class="target-audience" data-tilt>
-          <h3>Público Objetivo</h3>
-          <p>Nuestra propuesta web está dirigida principalmente a niños y adolescentes de 7 a 15 años, tanto de sexo masculino como femenino. Este público objetivo es ideal debido a su alta receptividad hacia los juegos educativos y su capacidad de influenciar positivamente su entorno familiar y escolar.</p>
-        </div>
-        
-        <div class="visual-identity" data-tilt>
-            <h3>Identidad Visual</h3>
-            <p>La identidad visual de nuestro sitio web incluirá:</p>
-            <ul>
-              <li>Logo: Animales en peligro de extinción.</li>
-              <li>Paleta de colores: Verde bosque, azul marino, café tierra, gris claro y blanco.</li>
-              <li>Íconos: Relacionados con animales y naturaleza, en estilo lineal.</li>
-              <li>Favicon: Logo de la UADE.</li>
-              <li>Estilos: Modernos y amigables, con fuentes "Nunito" y "Tilt Neon".</li>
-              <li>Nombre del sitio web: "Salvemos la Fauna"</li>
-              <li>Eslogan: "Juntos por un futuro salvaje"</li>
-            </ul>
-          </div>
-          
-        
-        <div class="github-repo" data-tilt>
-          <h3>Enlace al Repositorio del Sitio en GitHub</h3>
-          <p>Puedes encontrar el repositorio del sitio en GitHub <a href="https://github.com/usuario/repo" target="_blank">aquí</a>.</p>
-          <p>Link a tutorial sobre <a href="https://www.youtube.com/watch?v=sPlZQhMR4TU" target="_blank">¿Cómo Colaborar en un repositorio de GitHub?</a>.</p>
-        </div>
-        
-        <div class="prototype-link" data-tilt>
-          <h3>Enlace al Prototipo del Sitio en Figma u otra herramienta</h3>
-          <p>El esquema del sitio con los diseños de las páginas está disponible en <a href="https://figma.com/prototype" target="_blank">Figma</a>.</p>
-          <p>El prototipo incluye diseños para dispositivos desktop (notebook) y móviles (celulares).</p>
-        </div>
-      </section>
+      <div class="github-repo" data-tilt>
+        <h3>Enlace al Repositorio del Sitio en GitHub</h3>
+        <p>Puedes encontrar el repositorio del sitio en GitHub <a href="https://github.com/usuario/repo" target="_blank">aquí</a>.</p>
+        <p>Link a tutorial sobre <a href="https://www.youtube.com/watch?v=sPlZQhMR4TU" target="_blank">¿Cómo Colaborar en un repositorio de GitHub?</a>.</p>
+      </div>
+      
+      <div class="prototype-link" data-tilt>
+        <h3>Enlace al Prototipo del Sitio en Figma u otra herramienta</h3>
+        <p>El esquema del sitio con los diseños de las páginas está disponible en <a href="https://figma.com/prototype" target="_blank">Figma</a>.</p>
+        <p>El prototipo incluye diseños para dispositivos desktop (notebook) y móviles (celulares).</p>
+      </div>
+    </section>
+    <footer>
+      <p>Derechos reservados - Sitio desarrollado para uso
+        educativo - Diseño y desarrollo Web - UADE - 2024</p>
+    </footer>
   <script src="https://unpkg.com/scrollreveal"></script>
   <script src="js/avances.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="js/navbar.js"></script> 
+  
 </body>
 </html>

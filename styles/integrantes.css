@@ -1,3 +1,35 @@
+/* CSS para el footer */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    background-color: #34495e; 
+    color: #ffffff; 
+    text-align: center; 
+    padding: 20px; 
+    width: 100%; 
+    font-family: 'Nunito', sans-serif; 
+    font-size: 14px; 
+    position: relative;
+}
+
+footer p {
+    margin: 0; 
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&family=Tilt+Neon&display=swap");
 
 body {
@@ -7,23 +39,22 @@ body {
     background: radial-gradient(circle, rgba(67, 69, 112, 1) 3%, rgba(35, 36, 57, 1) 60%);
     background-size: cover;
     background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     margin: 0;
-    padding: 50px 0; /* Ajustamos el padding para centrado vertical */
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .container {
+    margin-top: 70px; 
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px; /* Agregamos un gap para separar las cartas */
+    gap: 20px;
 }
 
 .our-team {
     padding: 30px 0 40px;
-    margin: 50px; /* Ajustamos el margen para separar las cartas */
+    margin: 50px; 
     text-align: center;
     overflow: hidden;
     position: relative;
@@ -42,7 +73,7 @@ body {
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.5), inset 0px 2px 2px rgba(255, 255, 255, 0.2);
     transition: all 0.3s ease-in;
     animation: backgroundMove 10s linear infinite alternate;
-    width: 250px; /* Ajustamos el ancho */
+    width: 250px; 
 }
 
 @keyframes backgroundMove {
@@ -56,8 +87,8 @@ body {
 
 .our-team .picture {
     display: inline-block;
-    height: 150px; /* Ajustamos el tamaño de la imagen */
-    width: 150px; /* Ajustamos el tamaño de la imagen */
+    height: 150px; 
+    width: 150px; 
     margin-bottom: 50px;
     z-index: 1;
     position: relative;
@@ -111,7 +142,7 @@ body {
 
 .our-team .title {
     display: block;
-    font-size: 18px; /* Ajustamos el tamaño del texto */
+    font-size: 18px; 
     color: #4e5052;
     text-transform: capitalize;
 }
@@ -158,32 +189,32 @@ body {
 
 @media (max-width: 768px) {
     .our-team {
-        width: 220px; /* Ajustamos el ancho para pantallas más pequeñas */
-        margin: 20px auto; /* Centramos las cartas */
+        width: 220px;
+        margin: 20px auto;
     }
     
     .our-team .title {
-        font-size: 16px; /* Ajustamos el tamaño del texto para pantallas más pequeñas */
+        font-size: 16px; 
     }
     
     .our-team .picture {
-        height: 130px; /* Ajustamos el tamaño de la imagen para pantallas más pequeñas */
-        width: 130px; /* Ajustamos el tamaño de la imagen para pantallas más pequeñas */
+        height: 130px; 
+        width: 130px;
     }
 }
 
 @media (max-width: 576px) {
     .our-team {
-        width: 200px; /* Ajustamos el ancho para pantallas aún más pequeñas */
-        margin: 20px auto; /* Centramos las cartas */
+        width: 200px; 
+        margin: 20px auto; 
     }
     
     .our-team .title {
-        font-size: 14px; /* Ajustamos el tamaño del texto para pantallas aún más pequeñas */
+        font-size: 14px; 
     }
     
     .our-team .picture {
-        height: 110px; /* Ajustamos el tamaño de la imagen para pantallas aún más pequeñas */
-        width: 110px; /* Ajustamos el tamaño de la imagen para pantallas aún más pequeñas */
+        height: 110px; 
+        width: 110px; 
     }
 }
