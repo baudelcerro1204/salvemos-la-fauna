@@ -1,13 +1,17 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 footer {
     background-color: #34495e; 
     color: #ffffff; 
     text-align: center; 
     padding: 20px; 
     width: 100%; 
-    bottom: 0;
     font-family: 'Nunito', sans-serif; 
     font-size: 14px; 
-    position: relative;
 }
 
 footer p {

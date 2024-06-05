@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Salvemos la fauna - Juegos</title>
-    <link rel="stylesheet" href="styles/footer.css">
     <link rel="stylesheet" href="styles/juegos.css">
     <link rel="stylesheet" href="styles/navbar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
@@ -12,29 +11,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-custom navbar-mainbg">
-        <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fas fa-bars text-white"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
-                <div class="hori-selector"><div class="left"></div><div class="right"></div></div>
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="avances.html">Avances</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="juegos.html">Juegos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="integrantes.html">Integrantes</a>
-                </li>
-            </ul>
-        </div>
+  <section class="navBar">
+    <nav>
+      <a onclick="mostrarOcultar('mostrar')" class="icon-reorder"></a><!-- Al dar click aquí se mostrará u oculltará la lista -->
+      <ul id="mostrar">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="avances.html">Avances</a></li>
+        <li><a href="integrantes.html">Integrantes</a></li>
+        <li><a href="juegos.html">Juegos</a></li>
+      </ul>
     </nav>
-
+    </section>
     <section class="game-section">
         <h2 class="line-title">Salva la fauna - Juegos</h2>
         <div class="owl-carousel custom-carousel owl-theme">
@@ -53,11 +40,10 @@
                 <button class="play-button" onclick="location.href='leo.html'">Jugar</button>
             </div>
           </div>
-          <div class="item" style="background-image: url(https://www.yudiz.com/codepen/expandable-animated-card-slider/rdr-2.jpg);">
+          <div class="item" style="background-image: url(https://i.pinimg.com/736x/20/c6/91/20c6912a4325c42402890997866a82b9.jpg);">
             <div class="item-desc">
-              <h3>RDR 2</h3>
-              <p>RDR 2 is a multiplayer online battle arena by Valve. The game is a sequel to Defense of the
-                Ancients, which was a community-created mod for Blizzard Entertainment's Warcraft III.</p>
+              <h3>Juego 3</h3>
+              <p>Proximamente...</p>
               <button class="play-button">Jugar</button>
             </div>
           </div>
