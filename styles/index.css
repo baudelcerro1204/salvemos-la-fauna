@@ -450,8 +450,7 @@ input[type="email"]:focus {
   }
 
   .logo-uade {
-    top: 90%;
-    width: 40%; /* Ajusta el ancho según sea necesario */
+    display: none;
   }
 }
 
@@ -473,8 +472,7 @@ input[type="email"]:focus {
   }
 
   .logo-uade {
-    top: 130%; /* Ajusta el top según sea necesario */
-    width: 50%; /* Ajusta el ancho según sea necesario */
+    display: none;
   }
 
   .content h1 {
