@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuestionario sobre Conservación de Tiburones</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cuestionario sobre Conservación de Tiburones</h1>
+        <form id="quizForm">
+            <div class="question">
+                <p>1. ¿Cuál es una de las mayores amenazas para la población de tiburones en el mundo?</p>
+                <label><input type="radio" name="question1" value="Contaminación del agua"> Contaminación del agua</label><br>
+                <label><input type="radio" name="question1" value="Pesca excesiva"> Pesca excesiva</label><br>
+                <label><input type="radio" name="question1" value="Cambio climático"> Cambio climático</label><br>
+                <label><input type="radio" name="question1" value="Turismo"> Turismo</label>
+            </div>
+            <div class="question">
+                <p>2. ¿Qué práctica ayuda a proteger a los tiburones?</p>
+                <label><input type="radio" name="question2" value="Evitar productos de tiburón"> Evitar productos de tiburón</label><br>
+                <label><input type="radio" name="question2" value="Promover el ecoturismo responsable"> Promover el ecoturismo responsable</label><br>
+                <label><input type="radio" name="question2" value="Participar en programas de etiquetado y seguimiento"> Participar en programas de etiquetado y seguimiento</label><br>
+                <label><input type="radio" name="question2" value="Todas las anteriores"> Todas las anteriores</label>
+            </div>
+            <div class="question">
+                <p>3. ¿Por qué es importante conservar a los tiburones?</p>
+                <label><input type="radio" name="question3" value="Mantienen el equilibrio de los ecosistemas marinos"> Mantienen el equilibrio de los ecosistemas marinos</label><br>
+                <label><input type="radio" name="question3" value="Son una atracción turística importante"> Son una atracción turística importante</label><br>
+                <label><input type="radio" name="question3" value="Ayudan en la investigación científica"> Ayudan en la investigación científica</label><br>
+                <label><input type="radio" name="question3" value="Todas las anteriores"> Todas las anteriores</label>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
