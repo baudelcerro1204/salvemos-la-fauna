@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cuestionario sobre Conservación de Tiburones</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/manu.css">
 </head>
 <body>
     <div class="container">
@@ -34,7 +34,15 @@
             <button type="submit">Enviar</button>
         </form>
         <div id="result"></div>
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span id="closeModal" class="close">&times;</span>
+                <p id="modalResult"></p>
+                <button onclick="retryQuiz()">Volver a intentar</button>
+                <button onclick="window.location.href='juegos.html'">Ir al inicio</button>
+            </div>
+        </div>
     </div>
-    <script src="script.js"></script>
+    <script src="js/manu.js"></script>
 </body>
 </html>
