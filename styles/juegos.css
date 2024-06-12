@@ -29,6 +29,29 @@ body {
   min-height: 100vh;
 }
 
+.navBar .icon-reorder {
+  cursor: pointer;
+  font-size: 24px;
+  color: #fff;
+  display: none; /* Ocultarlo por defecto */
+}
+
+.navBar .icon-reorder i {
+  color: #fff; /* Color blanco para el ícono de la hamburguesa */
+}
+
+@media screen and (max-width: 800px) {
+  .navBar .icon-reorder {
+    display: block; /* Mostrar el ícono en pantallas pequeñas */
+  }
+
+  .navBar ul {
+    display: none;
+  }
+}
+
+/* Estilos adicionales */
+
 .hamburger {
   display: none;
 }
@@ -39,23 +62,6 @@ body {
   background: #f2f5f7;
   margin: 5px;
   transition: all 0.3s ease;
-}
-
-@media screen and (max-width: 800px) {
-  .hamburger {
-    display: block;
-    position: absolute;
-    cursor: pointer;
-    right: 5%;
-    top: 50%;
-    transform: translate(-5%, -50%);
-    z-index: 2;
-    transition: all 0.7s ease;
-  }
-  
-  li.fade {
-    opacity: 1;
-  }
 }
 
 .toggle .line1 {

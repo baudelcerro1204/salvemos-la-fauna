@@ -25,6 +25,88 @@ img {
 
 /* SECTION - HOME */
 
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&family=Tilt+Neon&display=swap");
+
+.navBar a {
+	color: #fdfdfd;
+	padding: 8px 0;
+	text-decoration: none;
+}
+
+.navBar h1 {
+	color: #fff;
+	font-size: 20px;
+	margin: 0;
+	text-align: center;
+	text-transform: uppercase;
+}
+.navBar header {
+	background: #222;
+	padding: 10px 0;
+	width: 100%;
+}
+.navBar li {
+	color: #fff;
+	list-style: none;
+	padding: 12px;
+}
+.navBar li:hover {
+	background: rgba(0,0,0,.25);
+}
+.navBar li a {
+	display: inline;
+}
+nav {
+	background-color: #34495e;
+	text-align: center;
+	width: 100%;
+}
+.navBar ul {
+	margin: 0;
+	padding: 0;
+}
+.navBar .icon-reorder {
+	cursor: pointer;
+	font-size: 24px;
+	color: #fdfdfd;
+	display: none; /* Ocultarlo por defecto */
+}
+
+/* En resoluciones mayores a 450px */
+@media screen and (min-width: 450px) {
+	.navBar a {
+		display: none;
+	}
+	.navBar li {
+		display: inline-block;
+	}
+	.navBar ul {
+		display: block !important;
+	}
+	.navBar .icon-reorder {
+		display: none; /* Ocultar el ícono en pantallas grandes */
+	}
+}
+
+/* En resoluciones menores a 450px */
+@media screen and (max-width: 449px){
+	.navBar a {
+		display: block;
+	}
+	.navBar ul {
+		display: none;
+	}
+	.navBar .icon-reorder {
+		display: block; /* Mostrar el ícono en pantallas pequeñas */
+	}
+}
+
+/* Agregar funcionalidad de toggle */
+.navBar ul.show {
+	display: block !important;
+}
+
+
 .home {
   display: grid;
   grid-template-columns: 45% 50%;

@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Salvemos la fauna</title>
     <link rel="stylesheet" href="styles/footer.css">
-    <link rel="stylesheet" href="./styles/navbar.css" />
     <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css"
@@ -14,15 +14,15 @@
   </head>
   <body>
     <section class="navBar">
-    <nav>
-      <a onclick="mostrarOcultar('mostrar')" class="icon-reorder"></a><!-- Al dar click aquí se mostrará u oculltará la lista -->
-      <ul id="mostrar">
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="avances.html">Avances</a></li>
-        <li><a href="integrantes.html">Integrantes</a></li>
-        <li><a href="juegos.html">Juegos</a></li>
-      </ul>
-    </nav>
+      <nav>
+        <a onclick="mostrarOcultar('mostrar')" class="icon-reorder"><i class="fas fa-bars"></i></a>
+        <ul id="mostrar">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="avances.html">Avances</a></li>
+          <li><a href="integrantes.html">Integrantes</a></li>
+          <li><a href="juegos.html">Juegos</a></li>
+        </ul>
+      </nav>
     </section>
     <section class="home">
       <div class="description">
@@ -37,11 +37,10 @@
           -Leonel Salva<br>
           -Manuel Gallardo Abatemarco
         </p>
-          <button class="btn" aria-label="submit"  onclick="location.href='integrantes.html'">
-            <span>Saber mas</span>
-            <ion-icon name="arrow-forward-outline"></ion-icon>
-          </button>
-        </form>
+        <button class="btn" aria-label="submit" onclick="location.href='integrantes.html'">
+          <span>Saber más</span>
+          <ion-icon name="arrow-forward-outline"></ion-icon>
+        </button>
       </div>
 
       <div class="users-color-container">
@@ -50,12 +49,7 @@
         <span class="item" style="--i: 3"></span>
         <img class="item" src="./images/tiger.jpg" style="--i: 4" alt="" />
 
-        <img
-          class="item"
-          src="./images/polar-bear.jpg"
-          style="--i: 10"
-          alt=""
-        />
+        <img class="item" src="./images/polar-bear.jpg" style="--i: 10" alt="" />
         <span class="item" style="--i: 11"></span>
         <img class="item" src="./images/monkey.jpg" style="--i: 12" alt="" />
         <span class="item" style="--i: 5"></span>
@@ -65,7 +59,7 @@
         <span class="item" style="--i: 7"></span>
         <img class="item" src="./images/ballena.jpg" style="--i: 6" alt="" />
       </div>
-      <img src="./images/logo-uade.png" class="logo-uade"/>
+      <img src="./images/logo-uade.png" class="logo-uade" />
     </section>
 
     <section class="card-container" id="card-container">
@@ -124,7 +118,7 @@
 
       <ul class="control" id="custom-control">
         <li>
-          <ion-icon  name="caret-back-outline"></ion-icon>
+          <ion-icon name="caret-back-outline"></ion-icon>
         </li>
         <li>
           <ion-icon name="caret-forward-outline"></ion-icon>

@@ -147,6 +147,7 @@ const images = [
         <div class="win-content">
           <h2>¡Ganaste!</h2>
           <button id="play-again">Jugar de nuevo</button>
+          <button id="play-again" onclick="window.location.href='juegos.html'">Volver al inicio</button>
         </div>
       `;
       document.body.appendChild(winMessage);
