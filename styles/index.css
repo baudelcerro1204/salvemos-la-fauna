@@ -311,7 +311,7 @@ input[type="email"]:focus {
 .logo-uade {
   position: absolute;
   width: 30%;
-  top: 83%;
+  top: 90%; /* Ajusta este valor según sea necesario */
 }
 
 /* SECTION - CARD CONTAINER */
