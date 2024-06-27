@@ -1,20 +1,43 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Puzzle</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton">
+    <link rel="stylesheet" href="styles/footer.css">
     <link rel="stylesheet" href="styles/leo.css">
+    <link rel="stylesheet" href="styles/navbar.css">
 </head>
-<body>   
-    <div class="logo-container">
-        <div class="logo">
-            <img src="./images/logo-uade.png" alt="Logo uade">
-            <img id="reference-image" src="" alt="Imagen de referencia" height="100" width="100">
+
+<body>
+    <header class="navBar">
+        <nav>
+            <a onclick="mostrarOcultar('mostrar')" class="icon-reorder"><i class="fas fa-bars"></i></a>
+            <ul id="mostrar">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="avances.html">Avances</a></li>
+                <li><a href="integrantes.html">Integrantes</a></li>
+                <li><a href="juegos.html">Juegos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="logo-container">
+            <div class="logo">
+                <img src="./images/logo-uade.png" alt="Logo uade">
+                <img id="reference-image" src="" alt="Imagen de referencia" height="100" width="100">
+            </div>
+            <div id="puzzle-wrapper"></div>
         </div>
-        <div id="puzzle-wrapper"></div>
-    </div>
+    </main>
     <script src="js/leo.js"></script>
+    <script src="js/navbar.js"></script>
+    <footer>
+        <p>Derechos reservados - Sitio desarrollado para uso
+            educativo - Diseño y desarrollo Web - UADE - 2024</p>
+    </footer>
 </body>
+
 </html>

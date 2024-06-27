@@ -1,133 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&family=Tilt+Neon&display=swap");
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: rgb(67, 69, 112);
-    background: radial-gradient(circle, rgba(67, 69, 112, 1) 3%, rgba(35, 36, 57, 1) 60%);
-    font-family: 'Anton', sans-serif;
-    flex-direction: column;
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  background: rgb(67, 69, 112);
+  background: radial-gradient(circle, rgba(67, 69, 112, 1) 3%, rgba(35, 36, 57, 1) 60%);
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
 }
 
-.logo-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: radial-gradient(circle, rgba(67, 69, 112, 1) 3%, rgba(35, 36, 57, 1) 60%);
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgb(67, 69, 112);
+.navBar {
+  width: 100%;
+}
+
+.navBar a {
+    color: #fdfdfd;
+    padding: 8px 0;
+    text-decoration: none;
+  }
+  
+  .navBar h1 {
+    color: #fff;
+    font-size: 20px;
+    margin: 0;
     text-align: center;
-    margin-top: 30px;
-    width: 400px;
-}
-
-.logo {
-    width: 100%; 
+    text-transform: uppercase;
+  }
+  
+  .navBar header {
+    background: #222;
+    padding: 10px 0;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(
-        90deg,
-        rgb(118, 167, 63) 0%,
-        rgb(51, 143, 118) 40%,
-        rgb(55, 141, 167) 50%,
-        rgb(117, 152, 242) 70%,
-        rgb(144, 118, 236) 100%
-    );
-    padding: 10px;
-    border-radius: 15px 15px 0 0; 
-    box-sizing: border-box; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+  }
+  
+  .navBar li {
+    color: #fff;
+    list-style: none;
+    padding: 12px;
+  }
+  
+  .navBar li:hover {
+    background: rgba(0,0,0,.25);
+  }
+  
+  .navBar li a {
+    display: inline;
+  }
+  
+  nav {
+    background-color: #34495e;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .navBar ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navBar .icon-reorder {
+    cursor: pointer;
+    font-size: 24px;
+    color: #fdfdfd;
+    display: none; /* Ocultarlo por defecto */
+  }
+  
+  /* En resoluciones mayores a 450px */
+  @media screen and (min-width: 450px) {
+    .navBar a {
+      display: none;
+    }
+    .navBar li {
+      display: inline-block;
+    }
+    .navBar ul {
+      display: block !important;
+    }
+    .navBar .icon-reorder {
+      display: none; /* Ocultar el ícono en pantallas grandes */
+    }
+  }
+  
+  /* En resoluciones menores a 450px */
+  @media screen and (max-width: 449px){
+    .navBar a {
+      display: block;
+    }
+    .navBar ul {
+      display: none;
+    }
+    .navBar .icon-reorder {
+      display: block; /* Mostrar el ícono en pantallas pequeñas */
+    }
+  }
+  
+  /* Agregar funcionalidad de toggle */
+  .navBar ul.show {
+    display: block !important;
+  }
+  
+  /* Agregar margen superior al contenido para que no quede tapado por el navbar */
+  .home {
+    margin-top: 60px; /* Ajusta este valor según la altura del navbar */
+  }
+  
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: radial-gradient(circle, rgba(67, 69, 112, 1) 3%, rgba(35, 36, 57, 1) 60%);
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgb(67, 69, 112);
+  text-align: center;
+  margin-top: 100px; /* Ajustado para que no quede tapado por el navbar */
+  width: 400px;
+}
+
+.logo {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(
+    90deg,
+    rgb(118, 167, 63) 0%,
+    rgb(51, 143, 118) 40%,
+    rgb(55, 141, 167) 50%,
+    rgb(117, 152, 242) 70%,
+    rgb(144, 118, 236) 100%
+  );
+  padding: 10px;
+  border-radius: 15px 15px 0 0;
+  box-sizing: border-box;
 }
 
 .logo img {
-    max-width: 120px;
-    border-radius: 0; 
+  max-width: 120px;
+  border-radius: 0;
 }
 
 .referencia {
-    max-width: 120px;
-    border-radius: 0; 
+  max-width: 120px;
+  border-radius: 0;
 }
 
 .puzzle {
-    width: 100%; 
-    display: inline-block;
-    border: 3px solid;
-    border-image: linear-gradient(
-        90deg,
-        rgb(118, 167, 63) 0%,
-        rgb(51, 143, 118) 40%,
-        rgb(55, 141, 167) 50%,
-        rgb(117, 152, 242) 70%,
-        rgb(144, 118, 236) 100%
-    ) 1;
-    
-    overflow: hidden;
-    background-color: rgb(67, 69, 112);
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
-    box-sizing: border-box; 
+  width: 100%;
+  display: inline-block;
+  border: 3px solid;
+  border-image: linear-gradient(
+    90deg,
+    rgb(118, 167, 63) 0%,
+    rgb(51, 143, 118) 40%,
+    rgb(55, 141, 167) 50%,
+    rgb(117, 152, 242) 70%,
+    rgb(144, 118, 236) 100%
+  ) 1;
+  
+  overflow: hidden;
+  background-color: rgb(67, 69, 112);
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
 }
 
 .tile {
-    border: 2px solid rgb(144, 118, 236);
-    cursor: pointer;
-    transition: transform 0.1s, box-shadow 0.1s;
-    background-color: rgb(144, 118, 236);
+  border: 2px solid rgb(144, 118, 236);
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s;
+  background-color: rgb(144, 118, 236);
 }
 
 .tile:hover {
-    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.3);
 }
 
 .tile:active {
-    transform: scale(0.95);
+  transform: scale(0.95);
 }
 
 .tile.empty {
-    background: none;
-    border: none;
-    cursor: default;
+  background: none;
+  border: none;
+  cursor: default;
 }
 
 .win-message {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgba(0, 0, 0, 0.8);
-    color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    z-index: 1000;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  z-index: 1000;
 }
 
 .win-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .win-content h2 {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .win-content button {
-    padding: 10px 20px;
-    background: #4caf50;
-    border: none;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
+  padding: 10px 20px;
+  background: #4caf50;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
 .win-content button:hover {
-    background: #45a049;
+  background: #45a049;
 }
