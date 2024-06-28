@@ -263,7 +263,7 @@ a:hover {
   overflow: hidden;
   transform: translateY(calc(100% - 54px));
   transition: all 0.4s ease-in-out;
-  background: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente */
+  background: rgba(0, 0, 0, 0.85); /* Fondo semi-transparente */
   border-radius: 0 0 10px 10px; /* Bordes redondeados */
 }
 .game-section .item.active .item-desc {
