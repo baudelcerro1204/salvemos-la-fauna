@@ -104,3 +104,7 @@ button:hover {
   display: block;
   width: 70%;
 }
+
+footer{
+  margin-top: auto;
+}

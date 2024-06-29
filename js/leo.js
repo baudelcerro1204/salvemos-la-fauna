@@ -6,6 +6,15 @@ const images = [
     "images/tigre_juegoleo.jpg"
   ];
   
+const messages = {
+  "images/ajolote_juegoleo.jpg": "El ajolote es un anfibio endémico de México y está en peligro crítico de extinción. Su preservación es crucial para la biodiversidad.",
+  "images/gorilla_juegoleo.jpg": "El gorila es uno de nuestros parientes más cercanos y su hábitat está siendo destruido. Ayuda a proteger los bosques tropicales.",
+  "images/osopolar_juegoleo.jpg": "El oso polar es un símbolo del cambio climático. La reducción del hielo marino está amenazando su supervivencia.",
+  "images/panda_juegoleo.jpg": "El panda gigante es un tesoro nacional en China. La deforestación y la pérdida de su habitat están amenzando su supervivencia.",
+  "images/tigre_juegoleo.jpg": "El tigre es un majestuoso depredador que está en peligro de extinción debido a la caza furtiva y la pérdida de hábitat."
+};
+
+
   function getRandomImage() {
     return images[Math.floor(Math.random() * images.length)];
   }
@@ -19,6 +28,7 @@ const images = [
       this.height = height;
       this.tileWidth = width / columns;
       this.tileHeight = height / rows;
+      this.moves = 0;
       this.tiles = Array.from({length: rows * columns}).map((_, i) => {
         const x = i % columns;
         const y = Math.floor(i / columns);
@@ -42,6 +52,7 @@ const images = [
       this.swapTiles(tile, emptyTile);
       this.updateTileElPosition(tile);
       this.updateTileElPosition(emptyTile);
+      this.moves++;
       setTimeout(() => this.checkWin(), 50);  
     }
   
@@ -143,9 +154,12 @@ const images = [
   
     showWinMessage() {
       const winMessage = createEl("div", "win-message");
+      const message = messages[this.src] || "";
       winMessage.innerHTML = `
         <div class="win-content">
           <h2>¡Ganaste!</h2>
+          <p>¡Felicidades! Completaste el rompecabezas en ${this.moves} movimientos.</p>
+          <p>${message}</p>
           <button id="play-again">Jugar de nuevo</button>
           <button id="play-again" onclick="window.location.href='juegos.html'">Volver al inicio</button>
         </div>
@@ -161,6 +175,7 @@ const images = [
     reset() {
       const newSrc = getRandomImage();  
       this.src = newSrc;
+      this.moves = 0;
       this.tiles.forEach(tile => {
         tile.x = tile.imageX;
         tile.y = tile.imageY;

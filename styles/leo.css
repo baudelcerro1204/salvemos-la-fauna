@@ -33,104 +33,104 @@ body {
 }
 
 .navBar a {
-    color: #fdfdfd;
-    padding: 8px 0;
-    text-decoration: none;
+  color: #fdfdfd;
+  padding: 8px 0;
+  text-decoration: none;
+}
+
+.navBar h1 {
+  color: #fff;
+  font-size: 20px;
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.navBar header {
+  background: #222;
+  padding: 10px 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.navBar li {
+  color: #fff;
+  list-style: none;
+  padding: 12px;
+}
+
+.navBar li:hover {
+  background: rgba(0,0,0,.25);
+}
+
+.navBar li a {
+  display: inline;
+}
+
+nav {
+  background-color: #34495e;
+  text-align: center;
+  width: 100%;
+}
+
+.navBar ul {
+  margin: 0;
+  padding: 0;
+}
+
+.navBar .icon-reorder {
+  cursor: pointer;
+  font-size: 24px;
+  color: #fdfdfd;
+  display: none; /* Ocultarlo por defecto */
+}
+
+/* En resoluciones mayores a 450px */
+@media screen and (min-width: 450px) {
+  .navBar a {
+    display: none;
   }
-  
-  .navBar h1 {
-    color: #fff;
-    font-size: 20px;
-    margin: 0;
-    text-align: center;
-    text-transform: uppercase;
-  }
-  
-  .navBar header {
-    background: #222;
-    padding: 10px 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 10;
-  }
-  
   .navBar li {
-    color: #fff;
-    list-style: none;
-    padding: 12px;
+    display: inline-block;
   }
-  
-  .navBar li:hover {
-    background: rgba(0,0,0,.25);
-  }
-  
-  .navBar li a {
-    display: inline;
-  }
-  
-  nav {
-    background-color: #34495e;
-    text-align: center;
-    width: 100%;
-  }
-  
   .navBar ul {
-    margin: 0;
-    padding: 0;
-  }
-  
-  .navBar .icon-reorder {
-    cursor: pointer;
-    font-size: 24px;
-    color: #fdfdfd;
-    display: none; /* Ocultarlo por defecto */
-  }
-  
-  /* En resoluciones mayores a 450px */
-  @media screen and (min-width: 450px) {
-    .navBar a {
-      display: none;
-    }
-    .navBar li {
-      display: inline-block;
-    }
-    .navBar ul {
-      display: block !important;
-    }
-    .navBar .icon-reorder {
-      display: none; /* Ocultar el ícono en pantallas grandes */
-    }
-  }
-  
-  /* En resoluciones menores a 450px */
-  @media screen and (max-width: 449px){
-    .navBar a {
-      display: block;
-    }
-    .navBar ul {
-      display: none;
-    }
-    .navBar .icon-reorder {
-      display: block; /* Mostrar el ícono en pantallas pequeñas */
-    }
-  }
-  
-  /* Agregar funcionalidad de toggle */
-  .navBar ul.show {
     display: block !important;
   }
-  
-  /* Agregar margen superior al contenido para que no quede tapado por el navbar */
-  .home {
-    margin-top: 60px; /* Ajusta este valor según la altura del navbar */
+  .navBar .icon-reorder {
+    display: none; /* Ocultar el ícono en pantallas grandes */
   }
-  
+}
+
+/* En resoluciones menores a 450px */
+@media screen and (max-width: 449px){
+  .navBar a {
+    display: block;
+  }
+  .navBar ul {
+    display: none;
+  }
+  .navBar .icon-reorder {
+    display: block; /* Mostrar el ícono en pantallas pequeñas */
+  }
+}
+
+/* Agregar funcionalidad de toggle */
+.navBar ul.show {
+  display: block !important;
+}
+
+/* Agregar margen superior al contenido para que no quede tapado por el navbar */
+.home {
+  margin-top: 60px; /* Ajusta este valor según la altura del navbar */
+}
+
 .logo-container {
   display: flex;
   flex-direction: column;
@@ -140,7 +140,8 @@ body {
   box-shadow: 0 10px 20px rgb(67, 69, 112);
   text-align: center;
   margin-top: 100px; /* Ajustado para que no quede tapado por el navbar */
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
 }
 
 .logo {
@@ -246,4 +247,35 @@ body {
 
 .win-content button:hover {
   background: #45a049;
+}
+
+
+footer {
+  margin-top: auto;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .logo-container {
+    width: 100%;
+  }
+  
+  .puzzle {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-container {
+    width: 100%;
+  }
+  
+  .puzzle {
+    width: 90%;
+  }
+
+  .win-content button {
+    width: 100%;
+    box-sizing: border-box;
+  }
 }
