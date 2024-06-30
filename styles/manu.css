@@ -108,3 +108,20 @@ button:hover {
 footer{
   margin-top: auto;
 }
+
+.correct {
+  background-color: rgba(144, 238, 144, 0.5); 
+  border: 1px solid green;
+  padding: 2px 5px; 
+  border-radius: 2px;
+  display: inline-block; 
+}
+
+.incorrect {
+  background-color: rgba(240, 128, 128, 0.5); 
+  border: 1px solid red;
+  padding: 2px 5px; 
+  border-radius: 2px;
+  display: inline-block; 
+}
+

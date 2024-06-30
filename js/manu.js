@@ -1,6 +1,12 @@
 document.getElementById('quizForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
+    // Eliminar las clases anteriores de correct e incorrect
+    const elements = document.querySelectorAll('.correct, .incorrect');
+    elements.forEach(element => {
+        element.classList.remove('correct', 'incorrect');
+    });
+
     const answers = {
         question1: 'Pesca excesiva',
         question2: 'Todas las anteriores',
@@ -12,10 +18,19 @@ document.getElementById('quizForm').addEventListener('submit', function(event) {
 
     for (let question in answers) {
         const userAnswer = document.querySelector(`input[name="${question}"]:checked`);
+        const correctAnswerElement = document.querySelector(`input[name="${question}"][value="${answers[question]}"]`);
+
         if (userAnswer) {
             userAnswers[question] = userAnswer.value;
+            const userAnswerLabel = userAnswer.parentElement;
+            const correctAnswerLabel = correctAnswerElement.parentElement;
+
             if (userAnswer.value === answers[question]) {
                 score++;
+                userAnswerLabel.classList.add('correct');
+            } else {
+                userAnswerLabel.classList.add('incorrect');
+                correctAnswerLabel.classList.add('correct');
             }
         }
     }
@@ -40,4 +55,10 @@ window.onclick = function(event) {
 function retryQuiz() {
     document.getElementById('modal').style.display = 'none';
     document.getElementById('quizForm').reset();
+
+    // Remover las clases de los elementos
+    const elements = document.querySelectorAll('.correct, .incorrect');
+    elements.forEach(element => {
+        element.classList.remove('correct', 'incorrect');
+    });
 }
