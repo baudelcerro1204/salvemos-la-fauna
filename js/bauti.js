@@ -7,6 +7,9 @@
             this.$modal = $(".modal"); // Modal para mostrar mensajes
             this.$overlay = $(".modal-overlay"); // Superposición del modal
             this.$restartButton = $("button.restart"); // Botón de reinicio
+            this.$animalInfoModal = $(".animal-info-modal"); // Modal de información del animal
+            this.$animalInfoText = $("#animal-info-text"); // Texto de información del animal
+            this.$closeButton = $(".close-button"); // Botón de cerrar el modal
             this.cardsArray = $.merge(cards, cards); // Duplicar el array de cartas para tener pares
             this.shuffleCards(this.cardsArray); // Barajar las cartas
             this.setup(); // Configurar el juego
@@ -31,6 +34,7 @@
         binding: function() {
             this.$memoryCards.on("click", this.cardClicked); // Evento de clic en las cartas
             this.$restartButton.on("click", $.proxy(this.reset, this)); // Evento de clic en el botón de reinicio
+            this.$closeButton.on("click", $.proxy(this.hideAnimalInfo, this)); // Evento de clic en el botón de cerrar el modal
         },
 
         // Método para manejar el clic en una carta
@@ -68,13 +72,13 @@
             }, 1000); // Esperar 1 segundo
         },
 
-        // Método para mostrar el modal
+        // Método para mostrar el modal de victoria
         showModal: function() {
             this.$overlay.show(); // Mostrar la superposición
             this.$modal.fadeIn("slow"); // Mostrar el modal lentamente
         },
 
-        // Método para ocultar el modal
+        // Método para ocultar el modal de victoria
         hideModal: function() {
             this.$overlay.hide(); // Ocultar la superposición
             this.$modal.hide(); // Ocultar el modal
@@ -82,7 +86,7 @@
 
         // Método para reiniciar el juego
         reset: function() {
-            this.hideModal(); // Ocultar el modal
+            this.hideModal(); // Ocultar el modal de victoria
             this.shuffleCards(this.cardsArray); // Barajar las cartas
             this.setup(); // Configurar el juego
             this.$game.show("slow"); // Mostrar el juego lentamente
@@ -135,10 +139,16 @@
             12: "El tapir está en peligro por la deforestación y la caza."
         },
 
-        // Método para mostrar información del animal
+        // Método para mostrar información del animal en el modal
         showAnimalInfo: function(id) {
             var info = this.animalInfo[id];
-            alert(info);
+            this.$animalInfoText.text(info); // Establecer el texto del modal
+            this.$animalInfoModal.show(); // Mostrar el modal
+        },
+
+        // Método para ocultar el modal de información del animal
+        hideAnimalInfo: function() {
+            this.$animalInfoModal.hide(); // Ocultar el modal
         }
     };
 
@@ -157,7 +167,7 @@
         { name: "bonobo", img: "https://c02.purpledshub.com/uploads/sites/62/2022/09/Bonobo-mature-male-GettyImages-590968630-a96f0cf.jpg?w=1029&webp=1", id: 11 },
         { name: "tapir", img: "https://static.dw.com/image/57351389_906.webp", id: 12 }
     ];
-    
+
     // Inicializar el juego con las cartas
     Memory.init(cards);
 })();
