@@ -82,6 +82,7 @@
         hideModal: function() {
             this.$overlay.hide(); // Ocultar la superposición
             this.$modal.hide(); // Ocultar el modal
+            this.$game.show(); // Mostrar el juego
         },
 
         // Método para reiniciar el juego
